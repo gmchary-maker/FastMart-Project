@@ -1,7 +1,7 @@
 // fetch address fun
 let userLocation=document.getElementById("location")
 userLocation.addEventListener("click",()=>{
-    userLocation.innerHTML=""
+    userLocation.innerHTML="fetching location..."
     navigator.geolocation.getCurrentPosition((position)=>{
         let lat=position.coords.latitude
         let lon=position.coords.longitude
@@ -21,9 +21,20 @@ userLocation.addEventListener("click",()=>{
 let fetCatagory=async()=>{
 
     let res=await  fetch('https://dummyjson.com/products/categories')
-
-
+    let catagories = await res.json()
+    console.log(catagories)
+    let catagory_items=document.getElementById("catagory_items")
+    catagories.forEach(catagory => {
+        catagory_items.innerHTML+=`
+        <div class="catagory-cary">
+            <div class="catagory-img">💕</div>
+            <p class="catagory-name">${catagory.name}</p>
+        </div>
+        `
+        
+    });
 }
+fetCatagory()
 
 
 
