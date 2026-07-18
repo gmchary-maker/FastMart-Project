@@ -151,7 +151,7 @@ header{
     /* align-items: center; */
     flex-direction: column;
     height: 400px;
-    padding: 0 18rem
+    padding: 0 20%
 }
 #catagory-title{
     border: 1px solid green;
@@ -172,9 +172,28 @@ header{
     justify-content: space-evenly;
     align-items: center;
 }
+.catagory-card{
+    border: 1px solid yellow;
+    height: 7rem;
+    width: 7rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
 .catagory-img{
     border: 1px solid black;
-
     height: 3.5rem;
     width: 3.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius:10px;
+    background-color: #ff0000;    
+}
+.catagory-name {
+  font-size: 0.67rem;
+  font-weight: 600;
+  text-align: center;
+
 }

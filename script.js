@@ -26,7 +26,7 @@ let fetCatagory=async()=>{
     let catagory_items=document.getElementById("catagory_items")
     catagories.forEach(catagory => {
         catagory_items.innerHTML+=`
-        <div class="catagory-cary">
+        <div class="catagory-card">
             <div class="catagory-img">💕</div>
             <p class="catagory-name">${catagory.name}</p>
         </div>
